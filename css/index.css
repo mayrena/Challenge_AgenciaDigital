@@ -67,7 +67,6 @@ html {
 
 a {
     text-decoration: none;
-    font-size: 2em;
     font-family: inherit;
     color: inherit;
 }
@@ -86,8 +85,85 @@ p {
     font-size: 1.8em;
 }
 
+img {
+    width: 100%;
+}
+
 /*  Definimos adicionalmente un ancho maximo para el contenedor de nuestra pagina:  */
 .container {
     max-width: 1200px;              
     margin: 0 auto;             /*  margen arriba y abajo es cero, y a los lados automaticos y se centra.   */
+}
+
+
+/*  Header  */
+
+header {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.navbar__logo {
+    max-width: 300px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+
+.navbar__link {
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);    /* padding: Arriba/abajo  A_los_lados; */
+    display: inline-block;
+    transition: background .3s ease-in-out;        /* transition: sobre_que - tiempo - tipo_aceleracion; */
+    position: relative;
+}
+
+.navbar__link:hover {
+    background-color: var(--primary-900);
+}
+
+
+/* Definimos clase para iconos acompanados de otra cosa, para que esten centrados (alineados) */
+.with-icon {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+/* Creacion de lista desplegable de Shop: 
+    Al hacer hover sobre el elemento, el .submenu tendra un
+    display: block, y cuando no se pasa el click, el elemento
+    .submenu tendra display: none, es decir se oculta */
+.with-submenu:hover .submenu {
+    display: block;
+
+}
+
+.submenu {
+    display: none;
+    width: 300px;
+    position: absolute;     /* lo sacamos del flujo de la pagina  */
+    /*top: 0; */
+    /*left: 0;      top: 0 se posiciona pegado arriba de la pag, o con left: 0; se posiciona a la derecha al inicio  */     
+    background-color: var(--dark-bg-solid);
+}
+
+.submenu__link {
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);        /* padding: Arriba/abajo  A_los_lados; */
+    font-size: var(--font-medium);
+    transition: background .3s ease-in-out;
+}
+
+.submenu__link:hover {
+    background-color: var(--primary-900);
 }

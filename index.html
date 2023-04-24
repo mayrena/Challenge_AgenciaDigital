@@ -8,17 +8,38 @@
 </head>
 <body>
     <header>  
-        <nav>
-            <picture>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
                 <a href="./index.html">
                     <img src="img/branding/logo_light_horizontal.svg" alt="Logo Funkoshop">
                 </a>
             </picture>
-            <ul>
-                <li><a href="./pages/shop/shop.html">SHOP</a></li>
-                <li><a href="">CONTACTO</a></li>
-                <li><a href="">LOGIN</a></li>
-                <li><a href=""><img src="img/icons/cart-icon.svg" alt="Carrito de Compras"></a></li>
+            <ul class="navbar__menu">
+                <!-- Creacion de lista desplegable de Shop con class 'with-submenu': -->
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/shop/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                   <!-- Lista desplegable de Shop: -->
+                   <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">Funkos</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">Remeras</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">LLaveros</a>
+                    </li>
+                   </ul>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="">CONTACTO</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="">LOGIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__cart" href=""><img src="img/icons/cart-icon.svg" alt="Carrito de Compras"></a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -29,7 +50,7 @@
             <a href="./pages/shop/shop.html"><button>SHOP</button></a>
         </article>
     </section>
-    <main class="container">
+    <main>
         <section class="item-1">
             <article>
               <h2>Star Wars & The Mandalorian</h2>
@@ -118,5 +139,6 @@
         <p>All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </body>
 </html>
