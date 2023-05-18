@@ -154,6 +154,7 @@ header {
     /*top: 0; */
     /*left: 0;      top: 0 se posiciona pegado arriba de la pag, o con left: 0; se posiciona a la derecha al inicio  */     
     background-color: var(--dark-bg-solid);
+    z-index: 3;
 }
 
 .submenu__link {
